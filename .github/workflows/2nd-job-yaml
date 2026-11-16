@@ -1,0 +1,26 @@
+name: Walmart First Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display welcome message
+        run: echo "Welcome to GitHub Actions"
+
+      - name: Display current date
+        run: date
+
+      - name: Display Linux information
+        run: uname -a
+
+      - name: Display uptime information
+        run: uptime
+
+      - name: Display Kernel Version
+        run: uname -r 
