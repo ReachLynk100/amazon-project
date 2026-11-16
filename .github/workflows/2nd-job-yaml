@@ -1,4 +1,4 @@
-name: Walmart First Workflow
+name: Walmart Second Workflow
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  first-job:
+  second-job:
     runs-on: ubuntu-latest
 
     steps:
       - name: Display welcome message
-        run: echo "Welcome to GitHub Actions"
+        run: echo "Welcome to the Second GitHub Actions Workflow"
 
       - name: Display current date
         run: date
@@ -23,4 +23,4 @@ jobs:
         run: uptime
 
       - name: Display Kernel Version
-        run: uname -r 
+        run: uname -r
