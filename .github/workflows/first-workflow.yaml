@@ -1,6 +1,6 @@
 name: First GitHub Actions Workflow
 on:
-  Workflow_dispatch:
+  workflow_dispatch:
 jobs:
   first-job01:
     runs-on: ubuntu-latest
