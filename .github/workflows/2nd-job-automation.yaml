@@ -1,0 +1,16 @@
+name: New automation workflow run on push
+on:
+  push:
+    branches:
+      - main
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display Message
+        run: echo "Welcome to GitHub Actions Classes"
+      - name: Kernel Version
+        run: uname -r 
+      - name: Memory Status
+        run: free -m 
