@@ -1,0 +1,17 @@
+name: push pull workflow
+on:
+  push:
+    branches:
+      - main
+      - development
+      - 'release/**'
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build jobs
+        run: echo "A Java Code Build Task"
+        
