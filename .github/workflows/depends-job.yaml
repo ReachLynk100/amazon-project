@@ -1,0 +1,21 @@
+name: Multiple Jobs Run
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Jobs
+        run: echo "A Build Job Execution"
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Test Job After Build
+        run: echo "Test Job After Build Process"
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: A deploy Job after Test
+        run: echo "A Deploy Job after Test Job"
+        
